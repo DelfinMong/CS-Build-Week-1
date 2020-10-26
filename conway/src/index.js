@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Grid from './Grid';
-// import Buttons from './Button'
+import Buttons from './Button'
+import Rules from './Rules'
 
 
-// state variable will be saved as state in the Main component which in charge of that variable.
-// pass that variable to other components, that variable is going to become props. 
-// state variable changes, it will automatically propagate to other components
+
 class Main extends React.Component {
   // define the state
   constructor() {
@@ -34,19 +33,19 @@ class Main extends React.Component {
     });
   };
 
-  seed = () => {
-    let gridCopy = arrayClone(this.state.gridFull);
-    for (let i = 0; i < this.rows; i++) {
-      for (let j = 0; j < this.cols; j++) {
-        if (Math.floor(Math.random() * 4) === 1) {
-          gridCopy[i][j] = true;
-        }
-      }
-    }
-    this.setState({
-      gridFull: gridCopy,
-    });
-  };
+  // seed = () => {
+  //   let gridCopy = arrayClone(this.state.gridFull);
+  //   for (let i = 0; i < this.rows; i++) {
+  //     for (let j = 0; j < this.cols; j++) {
+  //       if (Math.floor(Math.random() * 4) === 1) {
+  //         gridCopy[i][j] = true;
+  //       }
+  //     }
+  //   }
+  //   this.setState({
+  //     gridFull: gridCopy,
+  //   });
+  // };
 
   playButton = () => {
     clearInterval(this.intervalId);
@@ -150,6 +149,7 @@ class Main extends React.Component {
           selectBox={this.selectBox}
         />
         <h2>Generations: {this.state.generation}</h2>
+        <Rules />
       </div>
     );
   }

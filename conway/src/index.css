@@ -77,3 +77,10 @@ h4 {
 .a6 {
   background-color: greenyellow;
 }
+
+p {
+  text-align: justify;
+  font-weight: lighter;
+  font-size: 1rem;
+  margin: 70px
+}
