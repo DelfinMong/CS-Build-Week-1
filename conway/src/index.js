@@ -134,7 +134,7 @@ class Main extends React.Component {
     return (
       <div>
         <h1>Delfin's Game of Life</h1>
-        {/* <Buttons
+        <Buttons
           playButton={this.playButton}
           pauseButton={this.pauseButton}
           slow={this.slow}
@@ -142,7 +142,7 @@ class Main extends React.Component {
           clear={this.clear}
           seed={this.seed}
           gridSize={this.gridSize}
-        /> */}
+        />
         <Grid
           gridFull={this.state.gridFull}
           rows={this.rows}
